@@ -1,0 +1,133 @@
+*{
+  margin: auto;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  position: relative;  
+}
+
+header{
+  display: flex;
+  font-size: .5rem; 
+  margin: 3rem 1.5rem .3em 4.3rem;
+  text-transform: uppercase;
+  color: #7d8185;
+}
+
+.search-container {
+  margin-right: .125rem;
+  font-size: 1.5em;
+}
+
+#search {
+  margin-right: 2px;
+  height: 1.75em;
+  border: 1px;
+  border-radius: 10px;
+  padding-left: 1em;
+}
+
+input[type=text] {
+  width: 30%;
+  -webkit-transition: width 0.15s ease-in-out;
+  transition: width 0.15s ease-in-out;
+}
+
+/* When the input field gets focus,
+    change its width to 100% */
+input[type=text]:focus {
+ width: 70%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 1em;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(100, 100, 100, 0.4)
+}
+
+.modal {
+  width: 375px;
+  margin: 15% auto auto;
+  position: relative;
+  text-align: center;
+  background: #fff; 
+  border: 1px solid #778;
+  border-radius: 5px;
+  padding: 30px 20px;
+}
+
+.arrows-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+
+.modal-close {
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;  
+}
+    
+.last{
+    grid-column: 1;
+}
+.card{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-self: center;
+    border: .5px lightgrey solid;
+    border-radius: 3%;
+    margin: 10px;
+    height: 100px;
+    width: 400px;
+    max-height: 100px;
+    max-width: 400px;
+}
+
+.card:hover {
+  background-color: rgb(168, 217, 219);
+  box-shadow: .2rem .2rem .2rem .2rem rgba(136, 136, 136, 0.4)
+}
+.name{
+    font-size: .75rem;
+    margin-bottom: 3px;
+}
+.email{
+    font-size: .75rem;
+    margin-bottom: 3px;
+}
+.address{
+    font-size: .75rem;
+}
+.avatar{
+    grid-column: 1;
+    border-radius: 50%;
+    width:75px;
+    height: 75px;
+    align-self: center;
+    justify-self: center;
+}
+.text-container{
+    grid-column: 2;
+    align-self: center;
+}
+
+
+
