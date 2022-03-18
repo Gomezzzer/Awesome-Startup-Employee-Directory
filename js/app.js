@@ -1,13 +1,16 @@
 // global variables
 let employees = [];
 const urlAPI = `https://randomuser.me/api/?results=12&inc=name, picture,
-email, location, phone, dob &noinfo &nat=US`
+email, location, phone, dob &noinfo &nat=US`;
 const gridContainer = document.querySelector(".grid-container");
 const overlay = document.querySelector(".overlay");
 const modalContainer = document.querySelector(".modal-content");
 const modalClose = document.querySelector(".modal-close");
-
-
+const searchBar = document.getElementById('search');
+const arrowContainer = document.querySelector('.arrows-container');
+const prior = document.querySelector('.prior');
+const next = document.querySelector('.next');
+let openModal;
 
 
 
@@ -15,7 +18,7 @@ const modalClose = document.querySelector(".modal-close");
 fetch(urlAPI)
 .then(res => res.json())
 .then(res => res.results)
-.then(displayEmployees) 
+.then(displayEmployees)
 .catch(err => console.log(err))
 
 
@@ -40,7 +43,7 @@ function displayEmployees(employeeData) {
     <p class="address">${city}</p>
     </div>
     </div>
-    `
+    `;
     });
     gridContainer.innerHTML = employeeHTML; 
 
@@ -77,6 +80,7 @@ gridContainer.addEventListener('click', e => {
     const card = e.target.closest(".card");
     const index = card.getAttribute('data-index');
     displayModal(index);
+    openModal = index;
     }
 });
 
@@ -89,5 +93,31 @@ modalClose.addEventListener('click', () => {
 //Search Bar
 
 
+search.addEventListener('input', ()=> {
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach((card) => {
+        let name = card.querySelector("h2").innerHTML.toLowerCase();
+
+        if (name.includes(search.value.toLowerCase())){
+          card.style.display = '';
+        } else {
+           card.style.display = "none";
+        }
+
+     });
+ });
+
+    // Switch method
+
+arrowContainer.addEventListener('click', () => {
+        if(openModal === 11) {
+            openModal = 0;
+            displayModal(openModal);
+        } else {
+            openModal++;
+            displayModal(openModal);
+        }
+    });
 
 

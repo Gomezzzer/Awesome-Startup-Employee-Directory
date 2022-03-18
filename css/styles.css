@@ -8,7 +8,7 @@ body {
   position: relative;  
 }
 
-header{
+header {
   display: flex;
   font-size: .5rem; 
   margin: 3rem 1.5rem .3em 4.3rem;
@@ -17,8 +17,10 @@ header{
 }
 
 .search-container {
-  margin-right: .125rem;
+  margin-right: .1em;
+  margin-top: 14px;
   font-size: 1.5em;
+ 
 }
 
 #search {
@@ -35,16 +37,20 @@ input[type=text] {
   transition: width 0.15s ease-in-out;
 }
 
-/* When the input field gets focus,
-    change its width to 100% */
 input[type=text]:focus {
- width: 70%;
-}
+  width: 50%;
+ }
 
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
     padding: 1em;
+}
+
+.prior,
+.next {
+  font-size: 3em;
+  color:  rgb(168, 217, 219);
 }
 
 .overlay {
