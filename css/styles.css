@@ -111,17 +111,16 @@ input[type=text]:focus {
   background-color: rgb(168, 217, 219);
   box-shadow: .2rem .2rem .2rem .2rem rgba(136, 136, 136, 0.4)
 }
-.name{
+
+.name, .email {
     font-size: .75rem;
     margin-bottom: 3px;
 }
-.email{
-    font-size: .75rem;
-    margin-bottom: 3px;
-}
+
 .address{
     font-size: .75rem;
 }
+
 .avatar{
     grid-column: 1;
     border-radius: 50%;
@@ -130,6 +129,7 @@ input[type=text]:focus {
     align-self: center;
     justify-self: center;
 }
+
 .text-container{
     grid-column: 2;
     align-self: center;
