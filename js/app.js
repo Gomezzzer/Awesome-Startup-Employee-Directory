@@ -53,6 +53,7 @@ function displayModal(index) {
     // use object destructuring make our template literal cleaner
     let { name, dob, phone, email, location: { city, street, state, postcode
     }, picture } = employees[index];
+  //  console.log(street);
     let date = new Date(dob.date);
     const modalHTML = `
     <img class="avatar" src="${picture.large}" />
@@ -62,7 +63,7 @@ function displayModal(index) {
     <p class="address">${city}</p>
     <hr />
     <p>${phone}</p>
-    <p class="address">${street}, ${state} ${postcode}</p>
+    <p class="address">${street.number}, ${street.name}, ${state} ${postcode}</p>
     <p>Birthday:
     ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
     </div>
@@ -109,15 +110,25 @@ search.addEventListener('input', ()=> {
  });
 
     // Switch method
-
-arrowContainer.addEventListener('click', () => {
-        if(openModal === 11) {
-            openModal = 0;
-            displayModal(openModal);
+    prior.addEventListener('click', () => {
+        if ( openModal === 0 ) {
+          openModal = 11;
+          displayModal(openModal);
         } else {
-            openModal++;
-            displayModal(openModal);
+          openModal--;
+          displayModal(openModal);
         }
-    });
-
+      });
+      
+      next.addEventListener('click', () => {
+        if ( openModal === 11 ) {
+          openModal = 0;
+          displayModal(openModal);
+        } else {
+          openModal++;
+          displayModal(openModal);
+        }
+      });
+    
+    
 
