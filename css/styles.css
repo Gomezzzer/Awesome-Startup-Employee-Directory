@@ -1,4 +1,4 @@
-*{
+* {
   margin: auto;
   box-sizing: border-box;
   font-family: sans-serif;
@@ -20,7 +20,6 @@ header {
   margin-right: .1em;
   margin-top: 14px;
   font-size: 1.5em;
- 
 }
 
 #search {
@@ -39,18 +38,19 @@ input[type=text] {
 
 input[type=text]:focus {
   width: 50%;
- }
+}
 
 .grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    padding: 1em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+  padding: 1em;
 }
 
 .prior,
 .next {
   font-size: 3em;
-  color:  rgb(168, 217, 219);
+  color: rgb(168, 217, 219);
 }
 
 .overlay {
@@ -59,7 +59,7 @@ input[type=text]:focus {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(100, 100, 100, 0.4)
+  background: rgba(100, 100, 100, 0.4);
 }
 
 .modal {
@@ -90,50 +90,309 @@ input[type=text]:focus {
 .hidden {
   display: none;  
 }
-    
-.last{
-    grid-column: 1;
+
+.last {
+  grid-column: 1;
 }
-.card{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    justify-self: center;
-    border: .5px lightgrey solid;
-    border-radius: 3%;
-    margin: 10px;
-    height: 100px;
-    width: 400px;
-    max-height: 100px;
-    max-width: 400px;
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-self: center;
+  border: .5px lightgrey solid;
+  border-radius: 3%;
+  margin: 10px;
+  height: 100px;
+  width: 400px;
+  max-height: 100px;
+  max-width: 400px;
 }
 
 .card:hover {
   background-color: rgb(168, 217, 219);
-  box-shadow: .2rem .2rem .2rem .2rem rgba(136, 136, 136, 0.4)
+  box-shadow: .2rem .2rem .2rem .2rem rgba(136, 136, 136, 0.4);
 }
 
 .name, .email {
-    font-size: .75rem;
-    margin-bottom: 3px;
+  font-size: .75rem;
+  margin-bottom: 3px;
 }
 
-.address{
-    font-size: .75rem;
+.address {
+  font-size: .75rem;
 }
 
-.avatar{
-    grid-column: 1;
-    border-radius: 50%;
-    width:75px;
-    height: 75px;
-    align-self: center;
-    justify-self: center;
+.avatar {
+  grid-column: 1;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  align-self: center;
+  justify-self: center;
 }
 
-.text-container{
-    grid-column: 2;
-    align-self: center;
+.text-container {
+  grid-column: 2;
+  align-self: center;
 }
+
+
+.new_footer_area {
+  background: #fbfbfd;
+}
+
+
+.new_footer_top {
+  padding: 120px 0px 270px;
+  position: relative;
+  overflow-x: hidden;
+  margin: 1rem;
+}
+.new_footer_area .footer_bottom {
+  padding-top: 5px;
+  padding-bottom: 50px;
+}
+.footer_bottom {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  color: #7f88a6;
+  padding: 27px 0px;
+}
+.new_footer_top .company_widget p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 28px;
+  color: #6a7695;
+  margin-bottom: 20px;
+}
+.new_footer_top .company_widget .f_subscribe_two .btn_get {
+  border-width: 1px;
+  margin-top: 20px;
+}
+.btn_get_two:hover {
+  background: transparent;
+  color: #5e2ced;
+}
+.btn_get:hover {
+  color: #fff;
+  background: #6754e2;
+  border-color: #6754e2;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+.new_footer_top .f_widget.about-widget .f_list li a:hover {
+  color: #5e2ced;
+}
+.new_footer_top .f_widget.about-widget .f_list li {
+  margin-bottom: 11px;
+}
+.f_widget.about-widget .f_list li:last-child {
+  margin-bottom: 0px;
+}
+.f_widget.about-widget .f_list li {
+  margin-bottom: 15px;
+}
+.f_widget.about-widget .f_list {
+  margin-bottom: 0px;
+}
+.new_footer_top .f_social_icon a {
+  width: 44px;
+  height: 44px;
+  line-height: 43px;
+  background: transparent;
+  border: 1px solid #e2e2eb;
+  font-size: 24px;
+}
+.f_social_icon a {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  font-size: 14px;
+  line-height: 45px;
+  color: #858da8;
+  display: inline-block;
+  background: #ebeef5;
+  text-align: center;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.ti-facebook:before {
+  content: "\e741";
+}
+.ti-twitter-alt:before {
+  content: "\e74b";
+}
+.ti-vimeo-alt:before {
+  content: "\e74a";
+}
+.ti-pinterest:before {
+  content: "\e731";
+}
+
+.btn_get_two {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: #5e2ced;
+  border-color: #5e2ced;
+  color: #fff;
+}
+
+.btn_get_two:hover {
+  background: transparent;
+  color: #5e2ced;
+}
+
+.new_footer_top .f_social_icon a:hover {
+  background: #5e2ced;
+  border-color: #5e2ced;
+  color:white;
+}
+.new_footer_top .f_social_icon a + a {
+  margin-left: 4px;
+}
+.new_footer_top .f-title {
+  margin-bottom: 30px;
+  color: #263b5e;
+}
+.f_600 {
+  font-weight: 600;
+}
+.f_size_18 {
+  font-size: 18px;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: #4b505e;
+}
+.new_footer_top .f_widget.about-widget .f_list li a {
+  color: #6a7695;
+}
+
+.new_footer_top .footer_bg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 266px;
+}
+.cp {
+  margin: 2rem;
+}
+
+/* Media Query for screens up to 768px */
+@media (max-width: 768px) {
+  header {
+    font-size: 0.75rem;
+    margin: 2rem 1rem 0.2em 3rem;
+  }
+
+  .search-container {
+    font-size: 1.2em;
+  }
+
+  #search {
+    height: 1.5em;
+  }
+
+  input[type=text] {
+    width: 50%;
+  }
+
+  input[type=text]:focus {
+    width: 70%;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 2rem;
+  }
+
+ 
+  .card {
+    width: 90%;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 820px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 2rem;
+  }
+}
+
+/* Media Query for screens up to 480px (typical mobile width) */
+@media (max-width: 480px) {
+  header {
+    font-size: 1rem;
+    margin: 2.5rem 1.2rem 0.25em 3.5rem;
+  }
+
+  .search-container {
+    font-size: 1.3em;
+  }
+
+  #search {
+    height: 1.6em;
+  }
+
+  input[type=text] {
+    width: 40%;
+  }
+
+  input[type=text]:focus {
+    width: 60%;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Media Query for screens up to 1240px */
+@media (max-width: 1240px) {
+  header {
+    font-size: 1rem;
+    margin: 2.5rem 1.2rem 0.25em 3.5rem;
+  }
+
+  .search-container {
+    font-size: 1.3em;
+  }
+
+  #search {
+    height: 1.6em;
+  }
+
+  input[type=text] {
+    width: 40%;
+  }
+
+  input[type=text]:focus {
+    width: 60%;
+  }
+
+  .card {
+    width: 80%;
+    max-width: 80%;
+  }
+}
+
+
+
+
+
+
 
 
 
